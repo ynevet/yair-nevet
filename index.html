@@ -3,20 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yair Nevet - Senior Software Architect Portfolio</title>
+    <title>Yair Nevet | Software Architect, AI Builder, Security-Minded Engineer</title>
+    <meta name="description" content="Portfolio of Yair Nevet, a senior software architect building resilient backend systems, cloud platforms, AI products, and security-aware software.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        .bg-gradient {
-            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+        :root {
+            --ink: #0f172a;
+            --line: rgba(148, 163, 184, 0.22);
+            --panel: rgba(255, 255, 255, 0.78);
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+        html {
+            scroll-behavior: smooth;
         }
-        .hero-pattern {
-            background-color: #121826;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23203144' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23264e6d'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+
+        body {
+            font-family: "Manrope", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(34, 197, 94, 0.12), transparent 25%),
+                radial-gradient(circle at top right, rgba(249, 115, 22, 0.14), transparent 22%),
+                linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+        }
+
+        h1, h2, h3, .display-font {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .hero-shell {
+            background:
+                radial-gradient(circle at 10% 20%, rgba(45, 212, 191, 0.18), transparent 28%),
+                radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.22), transparent 24%),
+                linear-gradient(135deg, #07111f 0%, #0f172a 42%, #10253f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-shell::before,
+        .hero-shell::after {
+            content: "";
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(10px);
+            opacity: 0.5;
+        }
+
+        .hero-shell::before {
+            width: 18rem;
+            height: 18rem;
+            background: rgba(45, 212, 191, 0.15);
+            top: -5rem;
+            right: -3rem;
+        }
+
+        .hero-shell::after {
+            width: 14rem;
+            height: 14rem;
+            background: rgba(251, 191, 36, 0.14);
+            bottom: -4rem;
+            left: -2rem;
+        }
+
+        .glass-card {
+            background: var(--panel);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow: 0 18px 60px rgba(15, 23, 42, 0.12);
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.84);
+            border: 1px solid var(--line);
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+        }
+
+        .lift-card {
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+
+        .lift-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12);
+            border-color: rgba(15, 118, 110, 0.28);
+        }
+
+        .tag {
+            border: 1px solid rgba(15, 118, 110, 0.16);
+            background: rgba(240, 253, 250, 0.95);
+            color: #115e59;
+        }
+
+        .signal-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 9999px;
+            background: #34d399;
+            box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.12);
+        }
+
+        .photo-frame {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.28), rgba(249, 115, 22, 0.28));
+            padding: 0.35rem;
+            border-radius: 2rem;
+            box-shadow: 0 30px 80px rgba(2, 8, 23, 0.28);
+        }
+
+        .metric-card {
+            background: rgba(15, 23, 42, 0.54);
+            border: 1px solid rgba(148, 163, 184, 0.18);
         }
     </style>
     <script type="text/javascript">
@@ -27,141 +125,186 @@
     })(window, document, "clarity", "script", "unfezwf5fc");
 </script>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
-    <!-- Hero Section -->
-    <header class="hero-pattern text-white">
-        <div class="container mx-auto px-4 py-16 md:py-28">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <img src="IMG_3654.webp" alt="Yair Nevet" class="rounded-full w-64 h-64 mx-auto border-4 border-blue-400 shadow-lg object-cover">
+<body>
+    <header class="hero-shell text-white">
+        <nav class="container mx-auto px-4 py-6">
+            <div class="glass-card rounded-full px-5 py-3 flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center justify-between">
+                    <a href="#top" class="display-font text-lg font-bold tracking-wide">YAIR NEVET</a>
+                    <span class="md:hidden text-xs uppercase tracking-widest text-teal-200">Architect / AI / Security</span>
                 </div>
-                <div class="md:w-1/2 md:pl-10">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-2">Yair Nevet</h1>
-                    <h2 class="text-2xl md:text-3xl text-blue-300 mb-4">Senior Software Architect</h2>
-                    <p class="text-lg text-gray-300 mb-6">Specializing in Cloud, Backend, AI, ML, & Cyber Security</p>
-                    <div class="flex space-x-4 mb-6">
-                        <a href="https://github.com/ls-ynevet" target="_blank" class="text-white hover:text-blue-300 transition-colors">
-                            <i class="fab fa-github text-2xl"></i>
+                <div class="flex flex-wrap items-center gap-4 mt-3 md:mt-0 text-sm text-slate-200">
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#skills" class="hover:text-white transition-colors">Expertise</a>
+                    <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                    <a href="#initiatives" class="hover:text-white transition-colors">Initiatives</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="top" class="container mx-auto px-4 pb-16 pt-6 md:pt-10 md:pb-24">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-3 rounded-full border border-teal-300 border-opacity-20 bg-white bg-opacity-5 px-4 py-2 text-sm text-teal-100 mb-6">
+                        <span class="signal-dot"></span>
+                        Building resilient software where cloud scale, AI, and security intersect
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-5">Senior software architect turning complex systems into products people can trust.</h1>
+                    <h2 class="text-xl md:text-2xl text-teal-200 mb-4">Cloud, backend, AI, machine learning, and security-minded engineering</h2>
+                    <p class="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
+                        I design backend platforms, data-heavy systems, and AI-powered experiences with a strong bias for reliability, clarity, and practical execution.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <a href="https://calendar.app.google/rDPDu2UtPb1hnNyL8" target="_blank" rel="noreferrer" class="inline-flex items-center bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold px-6 py-3 rounded-full transition-colors">
+                            Book a call
                         </a>
-                        <a href="https://ynevet.medium.com/" target="_blank" class="text-white hover:text-blue-300 transition-colors">
-                            <i class="fab fa-medium text-2xl"></i>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScywD8eqiAFK0YaaddgzMrODAt2WZrv41JAxeEW5osxKoal7A/viewform" target="_blank" rel="noreferrer" class="inline-flex items-center border border-white border-opacity-25 hover:border-opacity-50 px-6 py-3 rounded-full font-semibold transition-colors">
+                            Start a conversation
                         </a>
-                        <a href="https://stackoverflow.com/users/952310/yair-nevet" target="_blank" class="text-white hover:text-blue-300 transition-colors">
-                            <i class="fab fa-stack-overflow text-2xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/yairnevet/" target="_blank" class="text-white hover:text-blue-300 transition-colors">
-                            <i class="fab fa-linkedin text-2xl"></i>
+                        <a href="#initiatives" class="inline-flex items-center text-white font-semibold px-4 py-3">
+                            See personal initiatives
+                            <i class="fas fa-arrow-down ml-2 text-sm"></i>
                         </a>
                     </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScywD8eqiAFK0YaaddgzMrODAt2WZrv41JAxeEW5osxKoal7A/viewform" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Get In Touch</a>
-                    <a href="https://calendar.app.google/rDPDu2UtPb1hnNyL8" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Let's Ketchup!</a>
+                    <div class="flex flex-wrap gap-5 text-slate-300 text-sm">
+                        <a href="https://github.com/ls-ynevet" target="_blank" rel="noreferrer" class="hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>GitHub</a>
+                        <a href="https://ynevet.medium.com/" target="_blank" rel="noreferrer" class="hover:text-white transition-colors"><i class="fab fa-medium mr-2"></i>Medium</a>
+                        <a href="https://stackoverflow.com/users/952310/yair-nevet" target="_blank" rel="noreferrer" class="hover:text-white transition-colors"><i class="fab fa-stack-overflow mr-2"></i>Stack Overflow</a>
+                        <a href="https://www.linkedin.com/in/yairnevet/" target="_blank" rel="noreferrer" class="hover:text-white transition-colors"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="photo-frame max-w-md mx-auto">
+                        <div class="glass-card rounded-3xl p-6">
+                            <img src="IMG_3654.webp" alt="Yair Nevet" class="rounded-3xl w-full h-96 object-cover object-center">
+                            <div class="grid grid-cols-2 gap-4 mt-5 text-left">
+                                <div class="metric-card rounded-2xl p-4">
+                                    <p class="text-3xl font-bold display-font">10+</p>
+                                    <p class="text-sm text-slate-300 mt-1">years building mission-critical software</p>
+                                </div>
+                                <div class="metric-card rounded-2xl p-4">
+                                    <p class="text-3xl font-bold display-font">5</p>
+                                    <p class="text-sm text-slate-300 mt-1">cities across global delivery and leadership</p>
+                                </div>
+                                <div class="metric-card rounded-2xl p-4">
+                                    <p class="text-3xl font-bold display-font">AI</p>
+                                    <p class="text-sm text-slate-300 mt-1">applied in products, automation, and analysis</p>
+                                </div>
+                                <div class="metric-card rounded-2xl p-4">
+                                    <p class="text-3xl font-bold display-font">Sec</p>
+                                    <p class="text-sm text-slate-300 mt-1">privacy and security built into the architecture</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 md:py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-            <div class="max-w-3xl mx-auto">
-                <p class="text-lg mb-6">A tech enthusiast and people person, shaping software and innovation for over a decade. Thriving on cutting-edge tech, cyber, cloud, data and AI.</p>
-                <p class="text-lg mb-6">Experienced in working with global teams and leading projects worldwide, including in Dubai, London, California, Warsaw and Tel Aviv. Worked in top-secret and global firms, bringing deep expertise in high-stakes environments.</p>
-                <p class="text-lg">Always looking to learn, grow, and do fascinating stuff in my day-to-day.</p>
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-4">
+                    <p class="text-sm uppercase tracking-widest text-teal-700 font-bold mb-3">About</p>
+                    <h2 class="text-3xl md:text-4xl font-bold leading-tight">Hands-on architecture with product instinct.</h2>
+                </div>
+                <div class="lg:col-span-8 section-card rounded-3xl p-8 md:p-10">
+                    <p class="text-lg text-slate-700 mb-5">I am a tech enthusiast and people-first builder who has spent more than a decade shaping software, teams, and technical direction across cloud, cyber, data, and AI.</p>
+                    <p class="text-lg text-slate-700 mb-5">My work spans high-stakes environments, from global organizations to confidential systems, with delivery experience across Dubai, London, California, Warsaw, and Tel Aviv.</p>
+                    <p class="text-lg text-slate-700">I enjoy turning ambiguity into working systems: simplifying architecture, aligning teams, and creating momentum from idea to production.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-100">
+    <section id="skills" class="py-16 md:py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Technical Skills</h2>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                <div>
+                    <p class="text-sm uppercase tracking-widest text-teal-700 font-bold mb-3">Expertise</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">The blend I bring to every build.</h2>
+                </div>
+                <p class="text-slate-600 max-w-2xl">
+                    Strong architecture only matters if it survives real traffic, team growth, and operational pressure.
+                </p>
+            </div>
             <div class="max-w-4xl mx-auto mb-12">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">Tech Stack</h3>
+                <div class="section-card p-6 md:p-8 rounded-3xl">
+                    <h3 class="text-2xl font-bold mb-5">Tech I work comfortably with</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Kubernetes</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Node.js</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Go</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">.NET</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AWS</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">GCP</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Kafka</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">RabbitMQ</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Redis</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Docker</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">TypeScript</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">C#</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">gRPC</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">REST</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">OpenTelemetry</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Prometheus</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Grafana</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Git</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Linux</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">WebSocket</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">ClickHouse</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Debezium</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Terraform</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQS</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Databricks</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Step Functions</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">S3</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Redshift</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Athena</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">DynamoDB</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Java</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">GraphQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AWS ECR</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Microservices</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Kubernetes</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Node.js</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Go</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">.NET</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">AWS</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">GCP</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Kafka</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">RabbitMQ</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Redis</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Docker</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">JavaScript</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">React</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">TypeScript</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">C#</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">gRPC</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">REST</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">OpenTelemetry</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Prometheus</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Grafana</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Python</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">PostgreSQL</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">MySQL</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">ClickHouse</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Terraform</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Databricks</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">GraphQL</span>
+                        <span class="tag px-3 py-2 rounded-full text-sm font-semibold">Microservices</span>
                     </div>
                 </div>
             </div>
             
-            <h2 class="text-3xl font-bold text-center mb-12">Areas of Expertise</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Core Strengths</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-blue-500 text-4xl mb-4">
+                <div class="section-card lift-card p-6 rounded-3xl">
+                    <div class="text-teal-700 text-4xl mb-4">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Cloud Architecture</h3>
                     <p>Expert in multi-cloud environments, migrations between AWS and GCP, and building scalable cloud-native solutions.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-blue-500 text-4xl mb-4">
+                <div class="section-card lift-card p-6 rounded-3xl">
+                    <div class="text-teal-700 text-4xl mb-4">
                         <i class="fas fa-server"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Backend Systems</h3>
                     <p>Designing and implementing robust, high-performance backend systems that power mission-critical applications.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-blue-500 text-4xl mb-4">
+                <div class="section-card lift-card p-6 rounded-3xl">
+                    <div class="text-teal-700 text-4xl mb-4">
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">AI & Machine Learning</h3>
                     <p>Building intelligent systems and implementing machine learning solutions for real-world problems.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-blue-500 text-4xl mb-4">
+                <div class="section-card lift-card p-6 rounded-3xl">
+                    <div class="text-teal-700 text-4xl mb-4">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Cyber Security</h3>
                     <p>Developing secure systems with a focus on anonymity, encryption, and protection against cyber threats.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-blue-500 text-4xl mb-4">
+                <div class="section-card lift-card p-6 rounded-3xl">
+                    <div class="text-teal-700 text-4xl mb-4">
                         <i class="fas fa-project-diagram"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">System Architecture</h3>
                     <p>Designing scalable and maintainable architectures for complex software systems across multiple domains.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-blue-500 text-4xl mb-4">
+                <div class="section-card lift-card p-6 rounded-3xl">
+                    <div class="text-teal-700 text-4xl mb-4">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Team Leadership</h3>
@@ -171,81 +314,223 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
+    <section id="projects" class="py-16 md:py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Key Projects</h2>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                <div>
+                    <p class="text-sm uppercase tracking-widest text-teal-700 font-bold mb-3">Selected Work</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Complex projects delivered with real-world constraints.</h2>
+                </div>
+                <p class="text-slate-600 max-w-2xl">
+                    Architecture matters most when it has to deal with scale, compliance, ambiguity, and hard operational tradeoffs.
+                </p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <div class="section-card lift-card rounded-3xl overflow-hidden p-1">
                     <div class="p-6">
+                        <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-3">Cloud modernization</p>
                         <h3 class="text-xl font-bold mb-3">Cloud Migration</h3>
-                        <p class="text-gray-700 mb-4">Led complex cloud migrations between AWS and GCP platforms, ensuring seamless transitions with minimal downtime.</p>
+                        <p class="text-gray-700 mb-4">Led complex cloud migrations between AWS and GCP platforms, ensuring seamless transitions with minimal downtime and clear operational visibility.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AWS</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">GCP</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Infrastructure</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">AWS</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">GCP</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Infrastructure</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+
+                <div class="section-card lift-card rounded-3xl overflow-hidden p-1">
                     <div class="p-6">
+                        <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-3">AdTech</p>
                         <h3 class="text-xl font-bold mb-3">DSP for AdTech</h3>
                         <p class="text-gray-700 mb-4">Architected and developed a demand-side platform for advertising technology that processes billions of requests daily.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Big Data</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Real-time Processing</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Big Data</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Real-time Processing</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+
+                <div class="section-card lift-card rounded-3xl overflow-hidden p-1">
                     <div class="p-6">
+                        <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-3">Fintech</p>
                         <h3 class="text-xl font-bold mb-3">Worldwide Tax Withholding System</h3>
                         <p class="text-gray-700 mb-4">Designed and implemented a global tax withholding system capable of handling tax regulations across multiple jurisdictions.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Financial Systems</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Compliance</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Financial Systems</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Compliance</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+
+                <div class="section-card lift-card rounded-3xl overflow-hidden p-1">
                     <div class="p-6">
+                        <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-3">AI products</p>
                         <h3 class="text-xl font-bold mb-3">AI Chatbot for Sports Betting</h3>
                         <p class="text-gray-700 mb-4">Created an intelligent chatbot that provides betting tips for sports events using machine learning and predictive analytics.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AI</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">ML</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">NLP</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">AI</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">ML</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">NLP</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+
+                <div class="section-card lift-card rounded-3xl overflow-hidden p-1">
                     <div class="p-6">
+                        <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-3">Automation</p>
                         <h3 class="text-xl font-bold mb-3">No-Code/Low-Code Web Scraping System</h3>
                         <p class="text-gray-700 mb-4">Architected and built a comprehensive no-code/low-code web scraping platform, enabling 24/7 data collection operations with scalable robots.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Kubernetes</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Node.js</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">TypeScript</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Big Data</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Kubernetes</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">TypeScript</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Big Data</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+
+                <div class="section-card lift-card rounded-3xl overflow-hidden p-1">
                     <div class="p-6">
+                        <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-3">Data platforms</p>
                         <h3 class="text-xl font-bold mb-3">Big Data Solutions</h3>
                         <p class="text-gray-700 mb-4">Designed and implemented various big data processing pipelines and analytics platforms using modern cloud technologies.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AWS</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Redshift</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Kafka</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Databricks</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">AWS</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Redshift</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Kafka</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Databricks</span>
                         </div>
                     </div>
                 </div>
-<script defer src="https://static.getbutton.io/widget/bundle.js?id=Uu7yA"></script>
-</body></html>
+            </div>
+        </div>
+    </section>
+
+    <section id="initiatives" class="py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="rounded-3xl p-8 md:p-10" style="background: linear-gradient(135deg, #0f172a 0%, #10253f 58%, #134e4a 100%);">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-10">
+                    <div class="text-white">
+                        <p class="text-sm uppercase tracking-widest text-teal-200 font-bold mb-3">Personal Initiatives</p>
+                        <h2 class="text-3xl md:text-4xl font-bold">Products and experiments I build outside the job description.</h2>
+                    </div>
+                    <p class="text-slate-300 max-w-2xl">
+                        This is where architecture meets curiosity: security tooling, technical demos, and product ideas that can become something bigger.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <article class="glass-card rounded-3xl p-7 text-slate-900 lg:col-span-2">
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <span class="inline-flex items-center rounded-full bg-teal-100 text-teal-800 px-3 py-1 text-sm font-bold">Flagship initiative</span>
+                            <a href="https://www.intentify.tech/features" target="_blank" rel="noreferrer" class="text-sm font-bold text-teal-800 hover:text-teal-700">
+                                Visit Intentify AI <i class="fas fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Intentify AI</h3>
+                        <p class="text-lg text-slate-700 mb-5">
+                            AI-powered data loss prevention for Slack that catches the mistakes legacy tools miss, especially wrong attachments, context violations, sensitive screenshots, and risky shared links.
+                        </p>
+                        <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                            <div class="rounded-2xl bg-teal-50 p-4 border border-teal-100">
+                                <p class="display-font text-2xl font-bold text-teal-800">2 min</p>
+                                <p class="text-sm text-slate-600">deployment with no credit card and no heavy rollout</p>
+                            </div>
+                            <div class="rounded-2xl bg-teal-50 p-4 border border-teal-100">
+                                <p class="display-font text-2xl font-bold text-teal-800">Zero</p>
+                                <p class="text-sm text-slate-600">content retention during analysis for a privacy-first posture</p>
+                            </div>
+                            <div class="rounded-2xl bg-teal-50 p-4 border border-teal-100">
+                                <p class="display-font text-2xl font-bold text-teal-800">3 checks</p>
+                                <p class="text-sm text-slate-600">intent, content, and context evaluated on every file</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tag px-3 py-1 rounded-full text-sm">Slack Security</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">AI Vision</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">DLP</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Link Analysis</span>
+                            <span class="tag px-3 py-1 rounded-full text-sm">Context-Aware Policies</span>
+                        </div>
+                        <p class="text-slate-600">
+                            Intentify AI focuses on the human side of security incidents: files sent to the wrong audience, fake anonymization, sensitive data in public channels, and exposed credentials hidden in screenshots.
+                        </p>
+                    </article>
+
+                    <div class="space-y-6">
+                        <article class="glass-card rounded-3xl p-6 text-slate-900">
+                            <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-2">Engineering lab</p>
+                            <h3 class="text-xl font-bold mb-3">Graceful Shutdown App</h3>
+                            <p class="text-slate-700 mb-4">A NestJS demo exploring graceful shutdown patterns for BullMQ workers with Redis dependencies, built around operational reliability.</p>
+                            <a href="https://github.com/ls-ynevet/graceful-shutdown-app" target="_blank" rel="noreferrer" class="text-sm font-bold text-teal-800 hover:text-teal-700">
+                                View on GitHub <i class="fas fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                            </a>
+                        </article>
+
+                        <article class="glass-card rounded-3xl p-6 text-slate-900">
+                            <p class="text-sm font-bold uppercase tracking-wider text-orange-600 mb-2">Technical exploration</p>
+                            <h3 class="text-xl font-bold mb-3">Node Rules Engine Demo</h3>
+                            <p class="text-slate-700 mb-4">A comparative experiment around Node.js rules engines, useful for decision systems, policy logic, and domain-heavy backend flows.</p>
+                            <a href="https://github.com/ls-ynevet/node-rules-engine-demo" target="_blank" rel="noreferrer" class="text-sm font-bold text-teal-800 hover:text-teal-700">
+                                View on GitHub <i class="fas fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-6">
+                <div class="section-card rounded-3xl p-8">
+                    <p class="text-sm uppercase tracking-widest text-teal-700 font-bold mb-3">Writing & Presence</p>
+                    <h2 class="text-3xl font-bold mb-4">I also share how I think.</h2>
+                    <p class="text-slate-600 mb-6">If you want a better sense of how I approach engineering, architecture, and problem framing, my public writing and technical profiles are a good place to start.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://ynevet.medium.com/" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-full border border-slate-200 hover:border-teal-300 px-4 py-2 font-semibold text-slate-700 hover:text-teal-800">
+                            <i class="fab fa-medium mr-2"></i>Medium
+                        </a>
+                        <a href="https://stackoverflow.com/users/952310/yair-nevet" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-full border border-slate-200 hover:border-teal-300 px-4 py-2 font-semibold text-slate-700 hover:text-teal-800">
+                            <i class="fab fa-stack-overflow mr-2"></i>Stack Overflow
+                        </a>
+                        <a href="https://github.com/ls-ynevet" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-full border border-slate-200 hover:border-teal-300 px-4 py-2 font-semibold text-slate-700 hover:text-teal-800">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div id="contact" class="section-card rounded-3xl p-8">
+                    <p class="text-sm uppercase tracking-widest text-teal-700 font-bold mb-3">Contact</p>
+                    <h2 class="text-3xl font-bold mb-4">Let's build something ambitious.</h2>
+                    <p class="text-slate-600 mb-6">I'm open to architecture consulting, technical leadership conversations, interesting product ideas, and high-leverage engineering collaborations.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://calendar.app.google/rDPDu2UtPb1hnNyL8" target="_blank" rel="noreferrer" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-white font-bold px-5 py-3 rounded-full">
+                            Schedule time
+                        </a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScywD8eqiAFK0YaaddgzMrODAt2WZrv41JAxeEW5osxKoal7A/viewform" target="_blank" rel="noreferrer" class="inline-flex items-center border border-slate-300 hover:border-slate-500 font-semibold px-5 py-3 rounded-full">
+                            Send a message
+                        </a>
+                        <a href="https://www.linkedin.com/in/yairnevet/" target="_blank" rel="noreferrer" class="inline-flex items-center border border-slate-300 hover:border-slate-500 font-semibold px-5 py-3 rounded-full">
+                            Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-slate-500">
+                <p>Yair Nevet. Software architecture, AI products, and security-conscious systems.</p>
+                <p>Built as a fast static portfolio with a sharper product story.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="https://static.getbutton.io/widget/bundle.js?id=Uu7yA"></script>
+</body>
+</html>
