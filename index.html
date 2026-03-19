@@ -75,6 +75,25 @@
             box-shadow: 0 18px 60px rgba(15, 23, 42, 0.12);
         }
 
+        .nav-shell {
+            background: rgba(8, 15, 29, 0.7);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            box-shadow: 0 20px 50px rgba(2, 8, 23, 0.28);
+        }
+
+        .nav-link {
+            color: #dbe7f3;
+            border: 1px solid transparent;
+            transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
         .section-card {
             background: rgba(255, 255, 255, 0.84);
             border: 1px solid var(--line);
@@ -116,6 +135,20 @@
             background: rgba(15, 23, 42, 0.54);
             border: 1px solid rgba(148, 163, 184, 0.18);
         }
+
+        .hero-copy {
+            text-wrap: balance;
+        }
+
+        .hero-subcopy {
+            color: rgba(226, 232, 240, 0.88);
+        }
+
+        @media (max-width: 767px) {
+            .nav-shell {
+                border-radius: 1.5rem;
+            }
+        }
     </style>
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -128,17 +161,17 @@
 <body>
     <header class="hero-shell text-white">
         <nav class="container mx-auto px-4 py-6">
-            <div class="glass-card rounded-full px-5 py-3 flex flex-col md:flex-row md:items-center md:justify-between">
+            <div class="nav-shell rounded-3xl px-4 md:px-6 py-3 flex flex-col md:flex-row md:items-center md:justify-between">
                 <div class="flex items-center justify-between">
-                    <a href="#top" class="display-font text-lg font-bold tracking-wide">YAIR NEVET</a>
+                    <a href="#top" class="display-font text-lg md:text-xl font-bold tracking-wide text-white">YAIR NEVET</a>
                     <span class="md:hidden text-xs uppercase tracking-widest text-teal-200">Architect / AI / Security</span>
                 </div>
-                <div class="flex flex-wrap items-center gap-4 mt-3 md:mt-0 text-sm text-slate-200">
-                    <a href="#about" class="hover:text-white transition-colors">About</a>
-                    <a href="#skills" class="hover:text-white transition-colors">Expertise</a>
-                    <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-                    <a href="#initiatives" class="hover:text-white transition-colors">Initiatives</a>
-                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                <div class="flex flex-wrap items-center gap-2 mt-3 md:mt-0 text-sm">
+                    <a href="#about" class="nav-link px-3 py-2 rounded-full">About</a>
+                    <a href="#skills" class="nav-link px-3 py-2 rounded-full">Expertise</a>
+                    <a href="#projects" class="nav-link px-3 py-2 rounded-full">Projects</a>
+                    <a href="#initiatives" class="nav-link px-3 py-2 rounded-full">Initiatives</a>
+                    <a href="#contact" class="nav-link px-3 py-2 rounded-full">Contact</a>
                 </div>
             </div>
         </nav>
@@ -150,9 +183,9 @@
                         <span class="signal-dot"></span>
                         Building resilient software where cloud scale, AI, and security intersect
                     </div>
-                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-5">Senior software architect turning complex systems into products people can trust.</h1>
+                    <h1 class="hero-copy text-4xl md:text-6xl font-bold leading-tight mb-5">Senior software architect turning complex systems into products people can trust.</h1>
                     <h2 class="text-xl md:text-2xl text-teal-200 mb-4">Cloud, backend, AI, machine learning, and security-minded engineering</h2>
-                    <p class="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
+                    <p class="hero-subcopy text-lg md:text-xl max-w-3xl mb-8">
                         I design backend platforms, data-heavy systems, and AI-powered experiences with a strong bias for reliability, clarity, and practical execution.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
@@ -178,7 +211,7 @@
                 <div class="lg:col-span-5">
                     <div class="photo-frame max-w-md mx-auto">
                         <div class="glass-card rounded-3xl p-6">
-                            <img src="IMG_3654.webp" alt="Yair Nevet" class="rounded-3xl w-full h-96 object-cover object-center">
+                            <img src="IMG_3654.webp" alt="Yair Nevet" class="rounded-3xl w-full h-96 object-cover object-top">
                             <div class="grid grid-cols-2 gap-4 mt-5 text-left">
                                 <div class="metric-card rounded-2xl p-4">
                                     <p class="text-3xl font-bold display-font">10+</p>
